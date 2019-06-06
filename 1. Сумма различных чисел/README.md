@@ -1,4 +1,4 @@
-     <h1 class="title">1. Сумма различных</h1>
+<h1 class="title">1. Сумма различных</h1>
       <table>
          <tr class="time-limit">
             <td class="property-title">Ограничение времени</td>
