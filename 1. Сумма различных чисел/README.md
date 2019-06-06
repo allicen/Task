@@ -42,7 +42,7 @@
       </thead>
       <tbody>
          <tr>
-            <td>3
+            <td>3<br>
 3 5 4
 </td>
             <td>12
@@ -60,7 +60,7 @@
       </thead>
       <tbody>
          <tr>
-            <td>5
+            <td>5<br>
 5 5 5 5 5
 </td>
             <td>5
@@ -78,7 +78,7 @@
       </thead>
       <tbody>
          <tr>
-            <td>10
+            <td>10<br>
 7 10 3 2 7 4 8 5 9 10
 </td>
             <td>48
