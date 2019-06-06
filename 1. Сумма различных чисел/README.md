@@ -42,11 +42,11 @@
       </thead>
       <tbody>
          <tr>
-            <td><pre>3
+            <td>3
 3 5 4
-</pre></td>
-            <td><pre>12
-</pre></td>
+</td>
+            <td>12
+</td>
          </tr>
       </tbody>
    </table>
@@ -60,11 +60,11 @@
       </thead>
       <tbody>
          <tr>
-            <td><pre>5
+            <td>5
 5 5 5 5 5
-</pre></td>
-            <td><pre>5
-</pre></td>
+</td>
+            <td>5
+</td>
          </tr>
       </tbody>
    </table>
@@ -78,11 +78,11 @@
       </thead>
       <tbody>
          <tr>
-            <td><pre>10
+            <td>10
 7 10 3 2 7 4 8 5 9 10
-</pre></td>
-            <td><pre>48
-</pre></td>
+</td>
+            <td>48
+</td>
          </tr>
       </tbody>
    </table>

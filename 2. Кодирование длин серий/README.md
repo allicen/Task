@@ -46,10 +46,10 @@
       </thead>
       <tbody>
          <tr>
-            <td><pre>A15BA5
-</pre></td>
-            <td><pre>21
-</pre></td>
+            <td>A15BA5
+</td>
+            <td>21
+</td>
          </tr>
       </tbody>
    </table>
@@ -63,10 +63,10 @@
       </thead>
       <tbody>
          <tr>
-            <td><pre>ABCDR
-</pre></td>
-            <td><pre>5
-</pre></td>
+            <td>ABCDR
+</td>
+            <td>5
+</td>
          </tr>
       </tbody>
    </table>
@@ -80,10 +80,10 @@
       </thead>
       <tbody>
          <tr>
-            <td><pre>Z123XY
-</pre></td>
-            <td><pre>125
-</pre></td>
+            <td>Z123XY
+</td>
+            <td>125
+</td>
          </tr>
       </tbody>
    </table>

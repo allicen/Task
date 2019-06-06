@@ -45,12 +45,12 @@
       </thead>
       <tbody>
          <tr>
-            <td><pre>3
+            <td>3
 1 2 3
-</pre></td>
-            <td><pre>0
+</td>
+            <td>0
 1 2 3
-</pre></td>
+</td>
          </tr>
       </tbody>
    </table>
@@ -64,11 +64,11 @@
       </thead>
       <tbody>
          <tr>
-            <td><pre>2
+            <td>2
 1 1
-</pre></td>
-            <td><pre>-1
-</pre></td>
+</td>
+            <td>-1
+</td>
          </tr>
       </tbody>
    </table>
@@ -82,12 +82,12 @@
       </thead>
       <tbody>
          <tr>
-            <td><pre>6
+            <td>6
 1 3 5 2 2 2
-</pre></td>
-            <td><pre>2
+</td>
+            <td>2
 1 2 5 2 3 2
-</pre></td>
+</td>
          </tr>
       </tbody>
    </table>
@@ -101,12 +101,12 @@
       </thead>
       <tbody>
          <tr>
-            <td><pre>10
+            <td>10
 1 0 0 0 1 1 0 1 1 0
-</pre></td>
-            <td><pre>4
+</td>
+            <td>4
 1 0 1 0 1 0 1 0 1 0
-</pre></td>
+</td>
          </tr>
       </tbody>
    </table>
