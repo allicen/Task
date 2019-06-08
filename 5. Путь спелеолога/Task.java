@@ -167,11 +167,11 @@ public class Task {
             if(queue.isEmpty()){
                 break;
             }else{
-                aPlus = aMinus = aNormal = queue.getFirst();
+                aPlus = aMinus = aNormal = queue.getFirst(); // Переопределение 1 переменной
                 if(queue.getFirst() == 0){
-                    shortWay.add(countStep.getFirst());
+                    shortWay.add(countStep.getFirst()); // Если дошли до поверхности, добавляем количество шагов в очередь
                 }
-                queue.removeFirst();
+                queue.removeFirst(); // Удаляем 1 точку из очереди
                 bPlus = bMinus = bNormal = queue.getFirst();
                 queue.removeFirst();
                 cPlus = cMinus = cNormal = queue.getFirst();
@@ -179,9 +179,8 @@ public class Task {
                 countStep.removeFirst();
             }
         }
-        shortWay();
-        // Запись результата в файл
-        FileWriter countStepFinish = new FileWriter("output.txt");
+        shortWay(); // Получаем короткий путь
+        FileWriter countStepFinish = new FileWriter("output.txt");// Запись результата в файл
         countStepFinish.write(String.valueOf(minStep));
         countStepFinish.close();
     }
