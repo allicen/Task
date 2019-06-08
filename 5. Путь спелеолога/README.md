@@ -24,7 +24,7 @@
       </thead>
       <tbody>
          <tr>
-            <td>3<br><br>
+            <td style="vertical-align: top; min-width: 100px;">3<br><br>
 				###<br>
 				###<br>
 				.##<br><br>

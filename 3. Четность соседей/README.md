@@ -45,10 +45,10 @@
       </thead>
       <tbody>
          <tr>
-            <td>3<br>
+            <td style="vertical-align: top; min-width: 100px;">3<br>
 1 2 3
 </td>
-            <td>0<br>
+            <td style="vertical-align: top; min-width: 100px;">0<br>
 1 2 3
 </td>
          </tr>
@@ -64,10 +64,10 @@
       </thead>
       <tbody>
          <tr>
-            <td>2<br>
+            <td style="vertical-align: top; min-width: 100px;">2<br>
 1 1
 </td>
-            <td>-1
+            <td style="vertical-align: top; min-width: 100px;">-1
 </td>
          </tr>
       </tbody>
@@ -82,10 +82,10 @@
       </thead>
       <tbody>
          <tr>
-            <td>6<br>
+            <td style="vertical-align: top; min-width: 100px;">6<br>
 1 3 5 2 2 2
 </td>
-            <td>2<br>
+            <td style="vertical-align: top; min-width: 100px;">2<br>
 1 2 5 2 3 2
 </td>
          </tr>
@@ -101,10 +101,10 @@
       </thead>
       <tbody>
          <tr>
-            <td>10<br>
+            <td style="vertical-align: top; min-width: 100px;">10<br>
 1 0 0 0 1 1 0 1 1 0
 </td>
-            <td>4<br>
+            <td style="vertical-align: top; min-width: 100px;">4<br>
 1 0 1 0 1 0 1 0 1 0
 </td>
          </tr>
