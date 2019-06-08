@@ -172,11 +172,11 @@ public class Task {
                     shortWay.add(countStep.getFirst()); // Если дошли до поверхности, добавляем количество шагов в очередь
                 }
                 queue.removeFirst(); // Удаляем 1 точку из очереди
-                bPlus = bMinus = bNormal = queue.getFirst();
+                bPlus = bMinus = bNormal = queue.getFirst(); // 2 точка
                 queue.removeFirst();
-                cPlus = cMinus = cNormal = queue.getFirst();
+                cPlus = cMinus = cNormal = queue.getFirst(); // 3 точка
                 queue.removeFirst();
-                countStep.removeFirst();
+                countStep.removeFirst(); // Удаляем из очереди количество шагов до удаленной точки
             }
         }
         shortWay(); // Получаем короткий путь
