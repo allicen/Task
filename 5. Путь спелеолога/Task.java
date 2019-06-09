@@ -2,14 +2,14 @@ import java.util.*;
 import java.io.*;
 public class Task {
     private static int countCell; // Количество клеток, 1 строка
-    private static List<Integer> allArray = new ArrayList<Integer>(); // Массив со значениями всех клеток
+    public static List<Integer> allArray = new ArrayList<Integer>(); // Массив со значениями всех клеток
     private static List<Integer> shortWay = new ArrayList<Integer>(); // Массив для записи всех возможных путей
     private static int arr3 [][][]; // Массив со всеми координатами
     private static int count = 0; // Счетчик для добавления в массив
     private static List<Integer> start = new ArrayList<Integer>(); // Координаты начальной точки
     private static int minStep; // Кратчайший путь
 
-    private static void changeSymbols(ArrayList aList){ // Замена символов на цифры, преобразование в массив
+    public static List<Integer> changeSymbols(List aList, int countCell){ // Замена символов на цифры, преобразование в массив
         int rock = -2; // Клетка с камнем
         int free = -1; // Свободная клетка
         int coverPosition = 0; // Начальная позиция
@@ -31,22 +31,23 @@ public class Task {
                 }
             }
         }
+        return allArray;
     }
-    private static void threeDimensionalArray(){ // переписать одномерный массив в трехмерный
-        arr3 = new int [countCell][countCell][countCell];
-        for(int a = 0; a < countCell; a++){
-            for(int b = 0; b < countCell; b++) {
-                for (int c = 0; c < countCell; c++) { // Координаты начала обхода
-                    arr3[a][b][c] = allArray.get(count);// Поиск координаты для старта обхода графа
-                    if(arr3[a][b][c] == 0){
-                        start.add(a);
-                        start.add(b);
-                        start.add(c);
+    public static List<Integer> threeDimensionalArray(int arr3 [][][], int countCell, List allArray){ // переписать одномерный массив в трехмерный
+            for(int a = 0; a < countCell; a++){
+                for(int b = 0; b < countCell; b++) {
+                    for (int c = 0; c < countCell; c++) { // Координаты начала обхода
+                        arr3[a][b][c] = (int) allArray.get(count);// Поиск координаты для старта обхода графа
+                        if(arr3[a][b][c] == 0){
+                            start.add(a);
+                            start.add(b);
+                            start.add(c);
+                        }
+                        count++;
                     }
-                    count++;
                 }
             }
-        }
+        return start;
     }
     private static void aCoordinate(int aPlus, int aMinus, int bNormal, int cNormal, ArrayDeque<Integer> queue, ArrayDeque<Integer> way, ArrayDeque<Integer> countStep, int e, int t){ // 1 координата
         if(aPlus+1 < countCell){
@@ -133,7 +134,7 @@ public class Task {
         ArrayDeque<Integer> queue = new ArrayDeque<>(); // Очередь со всеми координатами свободных точек
         ArrayDeque<Integer> way = new ArrayDeque<>(); // Очередь, которая хранит данные о
         ArrayDeque<Integer> countStep = new ArrayDeque<>(); // Очередь с количеством шагов из начальной позиции
-        ArrayList aList = new ArrayList(); // Массив для записи данных из файла
+        List aList = new ArrayList(); // Массив для записи данных из файла
         // Считывание данных из файла
         String str;
         FileReader fin = new FileReader("input.txt");
@@ -144,8 +145,10 @@ public class Task {
         }
         // Количество клеток
         countCell = Integer.valueOf((String) aList.get(0));
-        changeSymbols(aList);
-        threeDimensionalArray();
+        changeSymbols(aList, countCell);
+        arr3 = new int [countCell][countCell][countCell];
+        threeDimensionalArray(arr3, countCell, allArray);
+
 
         // Начало обхода графа
         int aPlus = start.get(0), aMinus = start.get(0), aNormal = start.get(0);
@@ -180,6 +183,7 @@ public class Task {
             }
         }
         shortWay(); // Получаем короткий путь
+        System.out.println(minStep);
         FileWriter countStepFinish = new FileWriter("output.txt");// Запись результата в файл
         countStepFinish.write(String.valueOf(minStep));
         countStepFinish.close();
