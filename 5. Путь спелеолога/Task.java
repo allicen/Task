@@ -2,14 +2,14 @@ import java.util.*;
 import java.io.*;
 public class Task {
     private static int countCell; // Количество клеток, 1 строка
-    public static List<Integer> allArray = new ArrayList<Integer>(); // Массив со значениями всех клеток
-    private static List<Integer> shortWay = new ArrayList<Integer>(); // Массив для записи всех возможных путей
+    private static ArrayList<Integer> allArray = new ArrayList<Integer>(); // Массив со значениями всех клеток
+    private static ArrayList<Integer> shortWay = new ArrayList<Integer>(); // Массив для записи всех возможных путей
     private static int arr3 [][][]; // Массив со всеми координатами
     private static int count = 0; // Счетчик для добавления в массив
-    private static List<Integer> start = new ArrayList<Integer>(); // Координаты начальной точки
+    private static ArrayList<Integer> start = new ArrayList<Integer>(); // Координаты начальной точки
     private static int minStep; // Кратчайший путь
 
-    public static List<Integer> changeSymbols(List aList, int countCell){ // Замена символов на цифры, преобразование в массив
+    static List<Integer> changeSymbols(ArrayList aList, int countCell){ // Замена символов на цифры, преобразование в массив
         int rock = -2; // Клетка с камнем
         int free = -1; // Свободная клетка
         int coverPosition = 0; // Начальная позиция
@@ -26,14 +26,14 @@ public class Task {
                     }else if (strArr.equals("S")){
                         strArr = String.valueOf(coverPosition);
                     }
-                    int strArrInt = Integer.valueOf(strArr); // Число, соответстсвующее заполнению клетки (камень, пусто, начало обхода)
+                    int strArrInt = Integer.valueOf(strArr); // Число, соответствующее заполнению клетки (камень, пусто, начало обхода)
                     allArray.add(strArrInt);
                 }
             }
         }
         return allArray;
     }
-    public static List<Integer> threeDimensionalArray(int arr3 [][][], int countCell, List allArray){ // переписать одномерный массив в трехмерный
+    static List<Integer> threeDimensionalArray(int arr3[][][], int countCell, ArrayList allArray){ // переписать одномерный массив в трехмерный
             for(int a = 0; a < countCell; a++){
                 for(int b = 0; b < countCell; b++) {
                     for (int c = 0; c < countCell; c++) { // Координаты начала обхода
@@ -132,9 +132,9 @@ public class Task {
 
     public static void main(String[] args) throws IOException {
         ArrayDeque<Integer> queue = new ArrayDeque<>(); // Очередь со всеми координатами свободных точек
-        ArrayDeque<Integer> way = new ArrayDeque<>(); // Очередь, которая хранит данные о
+        ArrayDeque<Integer> way = new ArrayDeque<>(); // Очередь, которая хранит данные о наличии пути
         ArrayDeque<Integer> countStep = new ArrayDeque<>(); // Очередь с количеством шагов из начальной позиции
-        List aList = new ArrayList(); // Массив для записи данных из файла
+        ArrayList aList = new ArrayList(); // Массив для записи данных из файла
         // Считывание данных из файла
         String str;
         FileReader fin = new FileReader("input.txt");
@@ -145,16 +145,14 @@ public class Task {
         }
         // Количество клеток
         countCell = Integer.valueOf((String) aList.get(0));
-        changeSymbols(aList, countCell);
         arr3 = new int [countCell][countCell][countCell];
+        changeSymbols(aList, countCell);
         threeDimensionalArray(arr3, countCell, allArray);
-
 
         // Начало обхода графа
         int aPlus = start.get(0), aMinus = start.get(0), aNormal = start.get(0);
         int bPlus = start.get(1), bMinus = start.get(1), bNormal = start.get(1);
         int cPlus = start.get(2), cMinus = start.get(2), cNormal = start.get(2);
-
         int e = 0; // Произвольное число
         way.addFirst(e); // Добавить в очередь произвольное число, чтобы очередь была непустой
         int t = 1; // Число шагов до 1 свободной клетки (1 шаг по условию задачи)
@@ -163,7 +161,6 @@ public class Task {
             aCoordinate(aPlus, aMinus, bNormal, cNormal, queue, way, countStep, e, t); // Координата 1
             bCoordinate(bPlus, bMinus, aNormal, cNormal, queue, way, countStep, e, t); // Координата 2
             cCoordinate(cPlus, cMinus, aNormal, bNormal, queue, way, countStep, e, t); // Координата 3
-
             if(!countStep.isEmpty()){
                 t = countStep.getFirst() + 1; // Количество шагов до следующей клетки
             }
