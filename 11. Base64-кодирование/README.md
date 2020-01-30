@@ -37,7 +37,7 @@
 		<p>В таблице показан результат кодирования строки Cat:
 		</p>
 		<div>
-			<p><img alt="PIC" src="/sample.png">
+			<p><img alt="PIC" src="https://github.com/allicen/Task/blob/master/11.%20Base64-%D0%BA%D0%BE%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/sample.png">
 			</p>
 		</div>
 		<p>Напишите программу, выполняющую кодирование последовательности байт по стандарту base64.
